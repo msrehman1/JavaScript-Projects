@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculate Your Age</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number Generator</title>
     <style>
-        .container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 400px;
-            width: 400px;
-            margin-left: 33%;
-            margin-top: 8%;
-            background-color: rgb(187, 218, 247);
-            border-radius: 10px;
-        }
-       
-        input {
-            display: block;
-            margin-top: 30px;
-            height: 30px;
-            width: 200px;
-            border-radius: 5px;
-            outline: none;
-            color: crimson;
-            font-size:17px;
-        
-        }
-        button {
-            height: 40px;
-            width: 100%;
-            margin-top: 20px;
-            background-color: crimson;
-            border: none;
-            border-radius: 30px;
-            color: white;
-            font-size: 20px;
-            font-style: italic;
-        }
+     body {
+        background-color: black;
+     }
+      .parent {
+        display: flex;
+        margin: 0 auto;
+        height: 300px;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        background:linear-gradient(red,orange);
+        box-shadow: 3px 5px 10px aliceblue;
+        border-radius: 20px;
+      }
+      #btn {
+        height: 40px;
+        width: 160px;
+        background-color: crimson;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+              
+        color: white;
+        font-size: 1.1rem; 
+        letter-spacing: 2px;
+      }
+      #btn:hover {
+        box-shadow: 2px 3px 10px aliceblue;
+      }
+      #result {
+        height: 120px;
+        width: auto;
+         text-align: center;
+        font-size: 35px;
+        color: aliceblue;
+        letter-spacing: 4px;
+      }
     </style>
-</head>
-<body>
-    <div class="container" > 
-    <div >
-        <h1>Age Calculator</h1>
-        <label for="birthdate">Enter Your Birthdate:</label>
-        <input type="date" id="birthdate">
-        <button onclick="calculateage()">Calculate</button>
-        <p id="Result"></p>
-    </div>
+  </head>
+  <body>
+    <div class="parent">
+        <div>
+            <p id="result"></p>
+            <button id="btn">
+                Generate OTP
+            </button>
+        </div>
     </div>
     
-    <script>
-        function calculateage() {
-            let birthdate = document.getElementById("birthdate").value;
-            let today = new Date();
-            let birth = new Date(birthdate);
-            let age = today.getFullYear()-birth.getFullYear();
-            let Result= document.getElementById("Result");
-            Result.innerText=`You are ${age} years old.`;
-        };
-    </script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
