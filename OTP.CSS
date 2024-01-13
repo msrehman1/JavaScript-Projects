@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+ }
+  .parent {
+    display: flex;
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(red,orange);
+    box-shadow: 3px 5px 10px aliceblue;
+    border-radius: 20px;
+  }
+  #btn {
+    height: 40px;
+    width: 160px;
+    background-color: crimson;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+          
+    color: white;
+    font-size: 1.1rem; 
+    letter-spacing: 2px;
+  }
+  #btn:hover {
+    box-shadow: 2px 3px 10px aliceblue;
+  }
+  #result {
+    height: 120px;
+    width: auto;
+     text-align: center;
+    font-size: 35px;
+    color: aliceblue;
+    letter-spacing: 4px;
+  }
